@@ -6,4 +6,17 @@
 // Créer en css l'hamburger menu qui se transforme en croix
 
 // Aide
-// Priorités en CSS : id > classe > baliseHtml
+// Priorités en CSS :!important id > classe > baliseHtml
+// ====================================================
+const sidebar = document.getElementById("side-bar");
+const content = document.querySelector(".content");
+console.log(content);
+
+btn.addEventListener("click",() => {
+    //   console.log("test");
+    sidebar.classList.toggle("action");
+});
+content.addEventListener("click", () => {
+    sidebar.classList.remove("action");
+})
+

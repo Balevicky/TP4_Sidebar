@@ -59,3 +59,31 @@ li:hover {
   background: #292929;
   color: #fcfcfb;
 }
+/* =============== */
+/*===première methode: s'il ne sont pas de la meme classe ===============
+.action{
+  left: 0 !important;
+  } */
+  
+  /* /*==deuxième methode; s'il sont de la meme div pour donner la priorité à la classe =============== */
+#side-bar.action{
+  left: 0 ;
+} 
+/* ========= suprimer le span N°2 et faire la croix avec le N°1 et N°3 */
+.action span{
+  position: absolute;
+}
+.action span:nth-child(1){
+transform: rotate(45deg);
+}
+.action span:nth-child(2){
+opacity: 0;
+}
+.action span:nth-child(3){
+transform: rotate(-45deg);
+}
+
+/* ========== pour uliser deux classe soeur */
+.action ~.content{
+  opacity: 0.3;
+}
